@@ -1,0 +1,2 @@
+helpclassdemo.HelpClassDemo
+helpclassdemo.Help

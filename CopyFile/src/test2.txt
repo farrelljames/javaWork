@@ -1,0 +1,1 @@
+If you are using an IDE like NetBeans or Eclipse, you can place the file in the root directory for the given project. 
