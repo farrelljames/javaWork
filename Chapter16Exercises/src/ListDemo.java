@@ -25,7 +25,7 @@ public class ListDemo implements ListSelectionListener {
         
         jlst = new JList<String>(names);
         
-        jlst.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        jlst.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         
         jscrlp = new JScrollPane(jlst);
         
@@ -44,12 +44,16 @@ public class ListDemo implements ListSelectionListener {
     }
     
     public void valueChanged(ListSelectionEvent le) {
-        int idx = jlst.getSelectedIndex();
+        int idxs[] = jlst.getSelectedIndices();
+        String str = "";
+        int idxLength = idxs.length;
         
-        if(idx != -1)
-            jlab.setText("Current selection: " + names[idx]);
-        else
+        if(idxLength > 0) {
+            for(int i = 0; i < idxLength; i++) str += names[idxs[i]] + " ";
+            jlab.setText("Current selection: " + str);
+        } else
             jlab.setText("Please choose a name");
+            
     }
     
     public static void main(String args[]) {

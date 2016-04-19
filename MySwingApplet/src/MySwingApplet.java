@@ -12,7 +12,7 @@ public class MySwingApplet extends JApplet {
     JButton jbtnDown;
     
     JLabel jlab;
-    
+
     public void init() {
         try {
             SwingUtilities.invokeAndWait(new Runnable() {
